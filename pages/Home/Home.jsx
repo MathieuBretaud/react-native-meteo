@@ -23,7 +23,6 @@ export function Home() {
 
   useEffect(() => {
     if (coords) {
-      console.log(coords);
       fetchWeather(coords);
       fetchCity(coords);
     }
