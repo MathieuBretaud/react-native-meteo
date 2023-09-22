@@ -1,6 +1,12 @@
-import { Text, View } from "react-native";
+import { Text, View, useWindowDimensions } from "react-native";
 import { s } from "./Txt.style";
 
 export function Txt({ children, style }) {
-  return <Text style={[s.text, style]}>{children}</Text>;
+  const { height } = useWindowDimensions();
+  const fontSize = style?.fontSize || s.text.fontSize;
+  return (
+    <Text style={[s.text, style, { fontSize: fontSize * 0.00118 * height }]}>
+      {children}
+    </Text>
+  );
 }

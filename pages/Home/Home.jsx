@@ -12,6 +12,7 @@ import { getWeatherInterpretation } from "../../services/meteo-services";
 import { MeteoAdvanced } from "../../components/MeteoAdvanced/MeteoAdvanced";
 import { useNavigation } from "@react-navigation/native";
 import { Container } from "../../components/Container/Container";
+import { Searchbar } from "../../components/Searchbar/Searchbar";
 
 export function Home() {
   const [coords, setCoords] = useState();
@@ -68,7 +69,9 @@ export function Home() {
           onPress={goToForcastPage}
         />
       </View>
-      <View style={s.searchbar_container}></View>
+      <View style={s.searchbar_container}>
+        <Searchbar />
+      </View>
       <View style={s.meteo_advanced}>
         <MeteoAdvanced
           wind={currentWeather.windspeed}
