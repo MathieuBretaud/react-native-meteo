@@ -10,8 +10,6 @@ export default function App() {
   const [isFontLoaded] = useFonts({
     "Alata-Regular": AlataRegular,
   });
-  console.log(isFontLoaded);
-  // console.log("toto");
   return (
     <ImageBackground
       source={backgroundImg}
