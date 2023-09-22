@@ -13,6 +13,9 @@ const s = StyleSheet.create({
     width: 30,
   },
   subtitle: 20,
+  forecastList: {
+    marginTop: 50,
+  },
 });
 
 export { s };
